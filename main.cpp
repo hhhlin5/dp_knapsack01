@@ -16,8 +16,14 @@
  * [x] 3. If no solution exists, print out something.
  * [x] 4. Otherwise, implement a traceback function that traverses the matrix to find a solution to the problem.
  * --------------------------------------------------------------------------------------------------------------------------------
- * input: all the items with the format (value, weight)
- * output: a subset of items that satisfy the given constraints.
+ * input:
+ *      a. Total number of items (n)
+ *      b. The weights of each items (w)
+ *      c. Values of each items (v)
+ *      d. Expected total weight (W)
+ *      e. Number items in the subset (k)
+ * output:
+ * a subset of items that satisfy the given constraints using the format: ith item: (value: XX, weight: XX)
  * */
 
 #include <iostream>
@@ -114,6 +120,7 @@ void KnapsackSubset(int n, int W, int l, vector<int>& weights, vector<int>& valu
 
 int main() {
     int n, W, k;
+    cout << "   /* Lecture Demo */ " << endl;
     cout << "Enter the total number of items (n): ";
     cin >> n;
 
@@ -135,6 +142,8 @@ int main() {
 
     cout << "Enter the number of items in the subset (k): ";
     cin >> k;
+
+    cout << endl;
 
     KnapsackSubset(n, W, k, weights, values);
 
